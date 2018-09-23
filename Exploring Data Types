@@ -1,0 +1,25 @@
+import Swift
+
+/**
+  * Read input from STDIN. Print your output to STDOUT 
+  * Use readLine() to read input from STDIN
+  * use print to write your output to STDOUT
+*/
+// Below is an example on how to take integer input and print it.
+// a = parse(Int,readline(STDIN))
+// print(a) 
+let string = readLine()
+
+
+if  string == nil {
+    print( "This is something else.")
+}
+else if let inval = Int(string!){
+    print("This input is of type Integer.")
+}else  if let inval = Float(string!){
+    print( "This input is of type Float.")
+    
+}else  {
+    print( "This input is of type string.")
+ 
+}
