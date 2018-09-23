@@ -1,0 +1,23 @@
+import Swift
+/**
+  * Read input from STDIN. Print your output to STDOUT 
+  * Use readLine() to read input from STDIN
+  * use print to write your output to STDOUT
+*/
+// Below is an example on how to take integer input and print it.
+// a = parse(Int,readline(STDIN))
+// print(a)
+
+let input: String = String(readLine()!) ?? ""
+var smallCapCount: Int = 0
+var highCapCount: Int = 0
+for chars in input.unicodeScalars {
+    let charInt: Int = Int(chars.value) 
+    if charInt >= 60 && charInt <= 90{
+        highCapCount += 1
+    }else if charInt >= 97 && charInt <= 122{
+        smallCapCount += 1
+    }
+}
+ print("\(highCapCount)")
+ print("\(smallCapCount)")
