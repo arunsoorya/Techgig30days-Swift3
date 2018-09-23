@@ -1,0 +1,28 @@
+import Swift
+import Foundation //Generic
+
+/**
+  * Read input from STDIN. Print your output to STDOUT 
+  * Use readLine() to read input from STDIN
+  * use print to write your output to STDOUT
+*/
+// Below is an example on how to take integer input and print it.
+// a = parse(Int,readline(STDIN))
+// print(a)
+
+var inputStr: String = readLine() ?? "0"
+ var inputInt: Int = Int(inputStr) ?? 0
+var length: Int = inputStr.characters.count
+var output: Int = 0
+
+for  (_, char) in inputStr.characters.enumerated() {
+    let charString = String(char)
+    var inputChar: Int =  Int(charString) ?? 0
+    output = output + Int(pow(Double(inputChar) , Double(length)))
+    
+}
+if output == inputInt{
+print("True")
+}else{
+    print("False")
+}
