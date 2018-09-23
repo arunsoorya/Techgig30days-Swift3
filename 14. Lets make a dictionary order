@@ -1,0 +1,20 @@
+import Swift
+import Foundation
+/**
+  * Read input from STDIN. Print your output to STDOUT 
+  * Use readLine() to read input from STDIN
+  * use print to write your output to STDOUT
+*/
+// Below is an example on how to take integer input and print it.
+// a = parse(Int,readline(STDIN))
+// print(a)
+
+var inputStr: String =  readLine()! 
+ var inputInt: Int = Int(inputStr) ?? 0
+
+var array = Set<String>(minimumCapacity: inputInt)
+for index in 0..<inputInt {
+    array.insert(readLine()! )
+
+}
+_ = array.sorted().flatMap({print($0)})
