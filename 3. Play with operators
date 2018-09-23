@@ -1,0 +1,17 @@
+import Swift
+
+/**
+  * Read input from STDIN. Print your output to STDOUT 
+  * Use readLine() to read input from STDIN
+  * use print to write your output to STDOUT
+*/
+// Below is an example on how to take integer input and print it.
+// a = parse(Int,readline(STDIN))
+// print(a)
+
+let principal: Double = Double(readLine()!) ?? 0
+let interest: Int = Int(readLine()!)  ?? 0
+let year: Int = Int(readLine()!)  ?? 0
+
+var total =  (principal * Double(interest) * Double(year))/100
+print(Int(total))
