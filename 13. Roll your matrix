@@ -1,0 +1,30 @@
+import Swift
+import Foundation
+/**
+  * Read input from STDIN. Print your output to STDOUT 
+  * Use readLine() to read input from STDIN
+  * use print to write your output to STDOUT
+*/
+// Below is an example on how to take integer input and print it.
+// a = parse(Int,readline(STDIN))
+// print(a)
+
+let mbynA =  readLine() ?? " "
+let sizeInput = mbynA.components(separatedBy:  " ")
+let mA:Int = Int(sizeInput[0]) ?? 0
+let nA:Int = Int(sizeInput[1]) ?? 0
+
+var arrayA   = Array(repeatElement(Array(repeatElement(0, count: nA)), count: mA))
+
+for index in 0..<mA {
+    let strA =  readLine() ?? " "
+    let arrayInput = strA.components(separatedBy:  " ")
+    arrayA.insert(arrayInput.flatMap({ Int($0)}), at: index)
+}
+for row in 0..<nA {
+    var output:String! = ""
+    for colm in 0..<mA {
+         output.append("\(arrayA[colm][row]) ")
+    }
+     print(output)
+}
